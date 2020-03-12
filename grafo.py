@@ -1,7 +1,3 @@
-'''Trabalho de Estrutura de dados II
-aluno: Romário Laltany Goulart da Silva
-Matricula: 131151781'''
-
 from os import listdir
 import sys
 import os
@@ -62,13 +58,13 @@ class Grafo:
 		print(self.lista_Vertices)
 
 
-	def remove_repetidos(lista):
+	'''def remove_repetidos(lista):
 	    l = []
 	    for i in lista:
 	        if i not in l:
 	            l.append(i)
 	    l.sort()
-	    return l
+	    return l'''
 
 	def nova_Aresta(self):  # Método recebe dois identificadores		
 		for origem in self.lista_Vertices:
@@ -90,8 +86,8 @@ class Grafo:
 				else:
 					print("O vertice %i não existe"%destino)
 		self.lista_Arestas_AuxTotal.sort()
-		x=[]
-		x = remove_repetidos(self.lista_Arestas_AuxTotal)
+		#x=[]
+		#x = remove_repetidos(self.lista_Arestas_AuxTotal)
 
 	def printArestas(self):
 		self.lista_ArestasAux=[]
@@ -167,39 +163,3 @@ class Grafo:
 				return i
 		else:
 			return None
-
-
-
-'''def main():
-	print("Rodando!")
-	#opcao = 0
-	grafo = Grafo()
-	while opcao != 2:
-		print("***********************************")
-		print("Entre com a opcao:")
-		print(" --- 1: Inserir")
-		print(" --- 2: Pesquisar")
-		print(" --- 3: mostrar arvore")
-		print(" --- 4: Buscas PseudoAleatorias")
-		print(" --- 5: Vizualizar Desempenho da busca")
-		opcao = int(input("->"))
-		if opcao == 1:
-	for i in range(len(lista_arqs)):
-		numero = lista_arqs[i].split(".")				
-		nome = numero[0]				
-		identifica = int(numero[0])	
-		print(identifica)			
-		grafo.novo_Vertice(identifica, nome)			
-	grafo.nova_Aresta()
-	#grafo.printArestas()
-	grafo.N1()
-	grafo.N2()
-	grafo.Total()
-	grafo.GraphvizN1()
-	grafo.GraphvizN2()
-	grafo.GraphvizTotal()
-	#grafo.nova_Aresta(202,205)
-	#grafo.imprime_Grafo_com_Destino(202,203)
-	#grafo.busca_Aresta(202,203)
-if __name__ == "__main__":
-	main()'''
